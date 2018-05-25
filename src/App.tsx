@@ -24,13 +24,11 @@ class App extends React.Component<{}, IAppState> {
     return (
       <div className="App">
         <Header
-          selectedPage="image"
+          selectedPage="Image"
           streamQuality={this.state.streamQuality}
           onStreamQualityChange={this.changeStreamQuality}
         />
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+
       </div>
     );
   }
