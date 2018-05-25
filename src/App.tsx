@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../node_modules/flexboxgrid/dist/flexboxgrid.min.css';
 import './App.css';
 
 import Header from "./Header";
@@ -12,6 +13,7 @@ const streamQualityOptions = ["high", "low"];
 class App extends React.Component<{}, IAppState> {
   constructor(props: {}) {
     super(props);
+
 
     this.state = {
       streamQuality: "high"

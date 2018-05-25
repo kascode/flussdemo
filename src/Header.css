@@ -6,6 +6,11 @@
   color: #fff;
 }
 
+.Header__container {
+  margin: 0 auto;
+  width: 1024px;
+}
+
 .Header__logo svg {
   height: 50px;
 }

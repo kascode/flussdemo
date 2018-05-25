@@ -14,15 +14,20 @@ interface IHeaderProps {
 const Header: React.StatelessComponent<IHeaderProps> = (props: IHeaderProps) => {
   return (
     <header className="Header">
-      <div className="Header__logo">
-        <Logo/>
+      <div className="row Header__container">
+        <div className="col-xs-3 Header__logo">
+          <Logo/>
+        </div>
+        <div className="col-xs-2 Header__toggle">
+          <Toggle
+            label="Stream"
+            options={["high", "low"]}
+            value={props.streamQuality}
+            onClick={props.onStreamQualityChange}
+          />
+        </div>
+        <div className="col-xs-7 Header__navigaiton"/>
       </div>
-      <Toggle
-        label="Stream"
-        options={["high", "low"]}
-        value={props.streamQuality}
-        onClick={props.onStreamQualityChange}
-      />
     </header>
   )
 };
