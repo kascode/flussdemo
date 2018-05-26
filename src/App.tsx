@@ -3,6 +3,7 @@ import '../node_modules/flexboxgrid/dist/flexboxgrid.min.css';
 import './App.css';
 
 import Header from "./Header";
+import ImageView from "./ImageView";
 
 interface IAppState {
     streamQuality: string
@@ -28,7 +29,7 @@ class App extends React.Component<{}, IAppState> {
           streamQuality={this.state.streamQuality}
           onStreamQualityChange={this.changeStreamQuality}
         />
-
+        <ImageView/>
       </div>
     );
   }
