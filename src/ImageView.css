@@ -20,7 +20,7 @@
 }
 
 .ImageViewSettings__backBtn {
-  margin-top: 26px;
+  margin-top: 16px;
   flex: 0 0 68px;
   height: 88px;
   line-height: 88px;
@@ -44,6 +44,11 @@
 }
 .ImageViewSettings__input:last-of-type {
   margin-right: 0;
+}
+
+.ImageViewSettings__auto {
+  padding-left: 40px;
+  flex: 0 0 150px;
 }
 
 .ImageViewControls {

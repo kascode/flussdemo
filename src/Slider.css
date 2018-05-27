@@ -32,6 +32,9 @@
   box-shadow: 0 2px 4px rgba(0,0,0,.15);
   font-weight: 300;
 }
+.Slider__handle:hover .Slider__icon {
+  background-color: #0044ea;
+}
 
 .Slider__icon {
   float: left;
@@ -39,8 +42,15 @@
   height: 24px;
   background-color: #a0a4a8;
   border-radius: 12px;
+  transition: background-color .3s;
 }
-.Slider__icon svg {
+.Slider__icon .Icon_sun {
+  margin-top: 2px;
+}
+.Slider__icon .Icon_smoothTriangle {
+  margin-top: 6px;
+}
+.Slider__icon .Icon_circles {
   margin-top: 2px;
 }
 

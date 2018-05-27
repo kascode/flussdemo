@@ -1,9 +1,11 @@
 import * as React from 'react';
+import Button from './Button';
+import {Circles, SmoothTriangle, Sun} from './Icons';
 import Slider from './Slider';
 
-import * as arrowLeftFull from "./images/arrowLeftFull.png";
-import * as cameraImage from "./images/cameraImage.jpg";
-import "./ImageView.css";
+import * as arrowLeftFull from './images/arrowLeftFull.png';
+import * as cameraImage from './images/cameraImage.jpg';
+import './ImageView.css';
 
 interface IImageViewState {
   brightness: number;
@@ -32,9 +34,27 @@ class ImageView extends React.Component<{}, IImageViewState> {
                 <img src={arrowLeftFull} alt=""/>
               </div>
               <div className="ImageViewSettings__inputsBlock">
-                <Slider label="Brightness" percentage={this.state.brightness} />
-                <Slider label="Sharpness" percentage={this.state.sharpness} />
-                <Slider label="Saturation" percentage={this.state.saturation} />
+                <Slider
+                  label="Brightness"
+                  percentage={this.state.brightness}
+                  icon={<Sun/>}
+                  onValueChange={this.handleBrightnessChange}
+                />
+                <Slider
+                  label="Sharpness"
+                  percentage={this.state.sharpness}
+                  icon={<SmoothTriangle />}
+                  onValueChange={this.handleSharpnessChange}
+                />
+                <Slider
+                  label="Saturation"
+                  percentage={this.state.saturation}
+                  icon={<Circles />}
+                  onValueChange={this.handleSaturationChange}
+                />
+              </div>
+              <div className="ImageViewSettings__auto">
+                <Button label="Auto" />
               </div>
             </div>
           </div>
@@ -47,6 +67,24 @@ class ImageView extends React.Component<{}, IImageViewState> {
         </div>
       </div>
     );
+  }
+
+  private handleBrightnessChange = (percentage: number): void => {
+    this.setState({
+      brightness: percentage
+    });
+  }
+
+  private handleSharpnessChange = (percentage: number): void => {
+    this.setState({
+      sharpness: percentage
+    });
+  }
+
+  private handleSaturationChange = (percentage: number): void => {
+    this.setState({
+      saturation: percentage
+    });
   }
 }
 

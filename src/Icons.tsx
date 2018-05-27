@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const Sun = () => {
   return (
-    <svg width="18px" height="18px" viewBox="0 0 18 18">
+    <svg className="Icon Icon_sun" width="18px" height="18px" viewBox="0 0 18 18">
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="AUTH-Copy" transform="translate(-447.000000, -407.000000)" fill-rule="nonzero">
           <path d="M456,412.142 C453.872985,412.142 452.142,413.872985 452.142,416 C452.142,418.12725 453.87322,419.859 456,419.859 C458.12678,419.859 459.858,418.12725 459.858,416 C459.858,413.872985 458.127015,412.142 456,412.142 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.3"/>
@@ -19,3 +19,31 @@ export const Sun = () => {
     </svg>
   )
 };
+
+export const SmoothTriangle = () => {
+  return (
+    <svg className="Icon Icon_smoothTriangle" width="16px" height="13px" viewBox="0 0 16 13">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AUTH-Copy" transform="translate(-528.000000, -411.000000)" stroke="#FFFFFF" stroke-width="1.3">
+          <path d="M529.868517,412 L542.131483,412 C542.683768,412 543.131483,412.447715 543.131483,413 C543.131483,413.197425 543.073045,413.390433 542.963533,413.5547 L536.83205,422.751925 C536.525698,423.211453 535.904828,423.335627 535.4453,423.029275 C535.335448,422.95604 535.241185,422.861777 535.16795,422.751925 L529.036467,413.5547 C528.730114,413.095172 528.854288,412.474302 529.313817,412.16795 C529.478084,412.058438 529.671092,412 529.868517,412 Z" id="Path-2"/>
+        </g>
+      </g>
+    </svg>
+  )
+};
+
+export const Circles = () => {
+  return (
+    <svg className="Icon Icon_circles" width="18px" height="17px" viewBox="0 0 18 17">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AUTH-Copy" transform="translate(-607.000000, -407.000000)" fill="none" stroke="#FFFFFF" stroke-width="1.3">
+          <g id="Group-8" transform="translate(609.000000, 409.000000)">
+            <circle id="Oval-Copy-2" cx="4" cy="9" r="4.65"/>
+            <circle id="Oval-Copy" cx="10" cy="9" r="4.65"/>
+            <circle id="Oval" cx="7" cy="4" r="4.65"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  )
+}
