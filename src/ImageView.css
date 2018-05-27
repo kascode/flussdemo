@@ -50,6 +50,9 @@
   padding-left: 40px;
   flex: 0 0 150px;
 }
+.ImageViewSettings__auto .Button {
+  margin-top: 57px;
+}
 
 .ImageViewControls {
   position: absolute;

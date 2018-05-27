@@ -1,12 +1,14 @@
 .Button {
   padding: 3px 10px;
   width: 90px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
-  color: #444851;
+  color: rgba(68,72,82,.4);
   border: 1px solid;
   border-radius: 14px;
-  opacity: .4;
+  background-color: rgba(255,255,255,.4);
+  cursor: pointer;
+  transition: background-color .3s;
 }
 
 .Button:hover {
