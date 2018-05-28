@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Button from './Button';
-import {Circles, SmoothTriangle, Sun} from './Icons';
+import {Arrow, Circles, SmoothTriangle, Sun} from './Icons';
 import Slider from './Slider';
 
 import * as arrowLeftFull from './images/arrowLeftFull.png';
 import * as cameraImage from './images/cameraImage.jpg';
+import * as minusIcon from './images/minus.png';
+import * as plusIcon from './images/plus.png';
 import './ImageView.css';
 
 interface IImageViewState {
@@ -59,7 +61,8 @@ class ImageView extends React.Component<{}, IImageViewState> {
             </div>
           </div>
           <div className="ImageViewControls">
-            dd
+            <ZoomControl />
+            <PanControls />
           </div>
           <div className="ImageView__image">
             <img src={cameraImage} alt=""/>
@@ -73,19 +76,44 @@ class ImageView extends React.Component<{}, IImageViewState> {
     this.setState({
       brightness: percentage
     });
-  }
+  };
 
   private handleSharpnessChange = (percentage: number): void => {
     this.setState({
       sharpness: percentage
     });
-  }
+  };
 
   private handleSaturationChange = (percentage: number): void => {
     this.setState({
       saturation: percentage
     });
-  }
+  };
 }
+
+const ZoomControl = () => {
+  return (
+    <div className="ZoomControl">
+      <div className="Zoom__plus">
+        <img src={plusIcon} alt=""/>
+      </div>
+      <div className="Zoom__minus">
+        <img src={minusIcon} alt=""/>
+      </div>
+    </div>
+  )
+};
+
+const PanControls = () => {
+  return (
+    <div className="PanControl">
+      <Arrow direction="top" />
+      <Arrow direction="right" />
+      <Arrow direction="bottom" />
+      <Arrow direction="left" />
+      <div className="PanControl__circle" />
+    </div>
+  )
+};
 
 export default ImageView;

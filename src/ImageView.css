@@ -56,10 +56,94 @@
 
 .ImageViewControls {
   position: absolute;
-  bottom: 0;
-  right: 0;
-}
+  bottom: 47px;
+  right: 23px;}
 
 .ImageView__image {
   width: 100%;
+}
+
+.PanControl {
+  position: relative;
+  width: 138px;
+  height: 138px;
+}
+
+.PanControl__circle {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 88px;
+  height: 88px;
+  background-color: rgba(255,255,255,.3);
+  border-radius: 44px;
+}
+.PanControl__circle:after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.5);
+  border-radius: 28px;
+}
+
+.PanControl .Arrow {
+  position: absolute;
+}
+.PanControl .Arrow_top {
+  top: 0;
+  left: 50%;
+  margin-left: -12px;
+}
+.PanControl .Arrow_right {
+  top: 50%;
+  right: 0;
+  margin-top: -8px;
+  margin-right: -4px;
+}
+.PanControl .Arrow_bottom {
+  bottom: 0;
+  left: 50%;
+  margin-left: -12px;
+}
+.PanControl .Arrow_left {
+  top: 50%;
+  left: 0;
+  margin-top: -8px;
+  margin-left: -4px;
+}
+
+.ZoomControl {
+  margin: 0 auto 56px;
+  position: relative;
+  width: 40px;
+  height: 80px;
+  background-color: #f2f5f6;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.ZoomControl:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+
+.ZoomControl .Zoom__plus, .ZoomControl .Zoom__minus {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.ZoomControl .Zoom__plus img, .ZoomControl .Zoom__minus img {
+  display: inline-block;
+  vertical-align: middle;
 }

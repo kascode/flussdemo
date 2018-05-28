@@ -46,4 +46,35 @@ export const Circles = () => {
       </g>
     </svg>
   )
+};
+
+interface IArrowProps {
+  direction: string
 }
+
+export const Arrow: React.StatelessComponent<IArrowProps> = (props: IArrowProps) => {
+  const getAngle = () => {
+    switch (props.direction) {
+      case 'top':
+        return 0;
+      case 'right':
+        return 90;
+      case 'bottom':
+        return 180;
+      case 'left':
+        return 270;
+      default:
+        return 0;
+    }
+  };
+
+  return (
+    <svg className={`Arrow Arrow_${props.direction}`} width="24px" height="15px" viewBox="0 0 24 15" transform={`rotate(${getAngle()} 0 0)`}>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="IMAGE-SET" fill="#DCDCDE" fill-rule="nonzero">
+          <path d="M22.4999568,13.7032832 C21.630477,14.6505344 20.4199857,14.7248702 19.3570666,13.7032832 L11.5636562,5.74509937 L3.77024583,13.7032832 C2.70732675,14.7248702 1.4948412,14.6505344 0.631344092,13.7032832 C-0.238135677,12.758156 -0.182297526,11.1609971 0.631344092,10.2732147 C1.44099727,9.38543221 9.99420536,0.711500292 9.99420536,0.711500292 C10.426951,0.237874724 10.9953036,0 11.5636562,0 C12.1320088,0 12.7003614,0.237874724 13.1370955,0.711500292 C13.1370955,0.711500292 21.6863152,9.38543221 22.4999568,10.2732147 C23.3155926,11.1609971 23.3694366,12.758156 22.4999568,13.7032832 Z" id="Shape"/>
+        </g>
+      </g>
+    </svg>
+  )
+};
